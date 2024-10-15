@@ -1,6 +1,6 @@
 import*as commonJs from"./common.js"
 async function quantidadeUsuariosPorRede(){
-    const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuario.json'
+    const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json'
     const res=await fetch(url)
     const dados=await res.json()
     const nomeDasRedes=Object.keys(dados)
@@ -53,4 +53,4 @@ async function quantidadeUsuariosPorRede(){
     document.getElementById('graficos-container').appendChild(grafico)
     Plotly.newPlot(grafico,data,laytout)
 }
-quantidadeUsuarioPorRede()
+quantidadeUsuariosPorRede()
